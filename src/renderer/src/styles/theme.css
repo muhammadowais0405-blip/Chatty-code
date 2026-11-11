@@ -1,0 +1,114 @@
+:root {
+  /* Purple-tinted surfaces — warmer, richer dark theme */
+  --bg-app: #16151c;
+  --bg-primary: #1d1c26;
+  --bg-secondary: #222131;
+  --bg-tertiary: #2a2838;
+  --bg-hover: #322f46;
+  --bg-selected: rgba(139, 92, 246, 0.13);
+
+  /* Borders */
+  --border-subtle: #2e2c40;
+  --border-strong: #3c3a52;
+
+  /* Text */
+  --text-primary: #eae8f0;
+  --text-secondary: #a8a5ba;
+  --text-muted: #6a677e;
+
+  /* Accent */
+  --accent: #8b5cf6;
+  --accent-hover: #9d70f7;
+  --accent-text: #f4f0ff;
+  --accent-dim: rgba(139, 92, 246, 0.14);
+
+  /* Semantic */
+  --danger: #e5484d;
+  --danger-hover: #f2555a;
+  --success: #3dd68c;
+  --warning: #f5a524;
+
+  /* Chat bubbles */
+  --bubble-user-bg: #4a3285;
+  --bubble-user-text: #ddd0ff;
+  --bubble-char-bg: #272537;
+  --bubble-char-text: #eae8f0;
+
+  /* Shape */
+  --radius-pill: 999px;
+  --radius-md: 10px;
+  --radius-sm: 7px;
+  --radius-xs: 4px;
+
+  /* Layout */
+  --sidebar-width: 260px;
+  --chatlist-width: 300px;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+
+body {
+  background: var(--bg-app);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  user-select: none;
+}
+
+button { font-family: inherit; cursor: pointer; }
+
+.pill-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-strong);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  font-size: 13px;
+  transition: background 0.12s, border-color 0.12s, opacity 0.12s;
+}
+.pill-button:hover { background: var(--bg-hover); }
+.pill-button:disabled { opacity: 0.45; cursor: default; }
+
+.pill-button--primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+.pill-button--primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+
+/* icon buttons */
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-secondary);
+  transition: background 0.12s, color 0.12s;
+}
+.icon-btn:hover { background: var(--bg-hover); color: var(--text-primary); }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: var(--radius-pill);
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-track { background: transparent; }
+
+.selectable {
+  user-select: text;
+  cursor: text;
+}

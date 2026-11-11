@@ -1,0 +1,4 @@
+{"user_name":"You","character_name":"Aria","create_date":"2026-01-05 10:00","chat_metadata":{}}
+{"name":"You","is_user":true,"send_date":"2026-01-05 10:00:01","mes":"Hey Aria, how's it going?","extra":{}}
+{"name":"Aria","is_user":false,"send_date":"2026-01-05 10:00:05","mes":"Pretty good! Check this out.","extra":{"image":"attachments/aria-01.png"}}
+{"name":"Aria","is_user":false,"send_date":"2026-01-05 10:00:09","mes":"And a couple more.","extra":{"media":[{"url":"attachments/aria-02.png"},{"url":"attachments/aria-03.png"}]}}
